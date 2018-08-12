@@ -1,0 +1,12 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg">
+	    	<symbol id="circle-arrow-down" viewBox="0 0 36 36">
+	    
+
+		<circle class="circle" cx="18" cy="18" r="18"  stroke="#19bd9a" stroke-width="1" fill="#19bd9a" />
+
+		<path d="M12 15 L17 21 L22 15 " stroke-width="2" stroke="#fff" fill="none"/>
+	
+		</symbol>
+	</svg>

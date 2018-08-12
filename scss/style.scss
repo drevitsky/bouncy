@@ -1,0 +1,493 @@
+//Starter-scss
+@import '_normalize';
+@import '_slick';
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:300,300i,400');
+
+@font-face {
+    font-family: 'big_johnregular';
+    src: url('../fonts/bigjohn-webfont.otf') format('otf'),
+    url('../fonts/bigjohn-webfont.ttf') format('ttf'),
+    	url('../fonts/bigjohn-webfont.woff2') format('woff2'),
+    		
+         	url('../fonts/bigjohn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$text-font: 'Open Sans', Arial, sans-serif;
+$title-font: 'Source Sans Pro', Arial, sans-serif;
+
+$text-color: #81868e;
+$title-color: #333b46;
+$theme-color: #19bd9a;
+
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 0.73vw;
+}
+
+body {
+	width: 100vw;
+	font: 400 1.6rem/1.5 $text-font;
+	min-height: 100%;
+	color: $text-color;
+	background-color: #f3f3f3;
+	
+	}
+	
+
+
+.header {
+	background:transparent url('../img/bg-header.jpg')  no-repeat;
+	background-size: cover;
+	height: 100vh;
+	text-align: center;
+	color: #fff;
+	&__title {
+  		font: 400 3.5rem/2 $title-font;
+  		//color: #fff;
+  		text-transform: uppercase;
+  		line-height: 2;
+  		letter-spacing: 7px;
+    	margin: 25vh 0 0;
+	}
+	&__text {
+		//display: inline-block;
+		font: 400 1.6rem/1.75 $text-font;
+		//width: 51%;
+
+	}
+	&__arrow {
+		display: inline-block;
+		
+		border-radius: 50%;
+		background-color: $theme-color;
+		width: 3.6rem;
+		height:3.6rem;
+		
+		position: absolute;
+		left: 50%;
+		bottom: 7.5rem;
+		transform: translate(-50%, 0);
+		//bottom: 7.7rem;
+		transition: all 0.6s ease;
+
+		&:hover {
+				
+				background-color: lighten($theme-color,10%);
+				
+			}
+
+
+	}
+
+	
+	
+
+}
+circle.circle {
+			fill: #19bd9a;
+			&:hover {
+				transform: scale(1.2);
+				fill: red;
+			}
+
+		}
+	
+.conteiner {
+	//display: inline-block;
+	width: 86%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 40px 0 ;
+	position: relative;
+	
+	text-align: center;
+	
+}
+
+// блок меню с логотипом
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	&__logo {
+		//display: inline-block;
+		font: 400 25px/1 "big_johnregular",Arial,sans-serif;
+		color: #fff;
+  		text-decoration: none;
+  		text-transform: uppercase;
+  		
+
+	}
+	&__item{
+			display: inline-block;
+			list-style-type: none;
+	}
+	&__link {
+	  
+  		font: 400 16px/1 "Open Sans",Arial,sans-serif;
+  		color: #fff;
+  		text-decoration: none;
+  		padding: 10px 20px;
+  		border: 1px solid transparent;
+    	border-radius: 30px;
+    	&:hover,
+ 		&:focus,
+  		&.active {
+
+			border: 1px solid #fff;
+ 		}
+ 		&:active {
+
+			background-color: rgba(255,255,255, 0.2);
+ 		}
+  	}
+
+
+}
+// блок меню с логотипом end
+//----------------------------
+// блок меню start
+.menu {
+		
+		
+		display: flex;
+    	align-items: center;
+    	align-content: center; 
+    	justify-content: center; 
+
+
+
+
+		
+	&__list {
+		width: 45rem;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+	}
+	&__item {
+			display: inline-block;
+			list-style-type: none;
+	}
+	&__link {
+		font: 400 1.6rem/1 $text-font;
+  		color: #464646;
+  		text-decoration: none;
+		&:hover,
+ 		&:focus,
+  		&.active {
+			border-bottom: 1px solid $theme-color;
+  		}
+
+	}
+}
+// блок меню  end
+
+
+//
+.section {
+
+	text-align: center;
+	&__title {
+		font: 300 2rem/0.6 $title-font;
+		letter-spacing: 5px;
+		color: $title-color;
+		text-transform: uppercase;
+		&--already {
+			font: 400 2rem/1.25 $text-font;
+			color: #fff;
+			text-transform:capitalize;
+			letter-spacing: 2px;
+		}
+
+	}
+	&__subtitle {
+		font: 400 1.4rem/1.78 $text-font;
+		color:$text-color;
+		width: 45rem;
+		display: inline-block;
+		text-align: center;
+
+	}
+	&--portfolio {
+		height: 123rem;
+		//background-color: #fff;
+	}
+	&--team {
+		
+		background-color: #fff;
+	}
+	&--already {
+		
+		background:transparent url('../img/bg-already.jpg') no-repeat;
+		background-size: cover;
+
+	}
+
+
+}
+
+//
+
+
+
+// блок с социальными сетями
+.social {
+	&__list {
+		padding: 0;
+		margin: 0;
+text-align: center;
+	}
+	&__item {
+		display: inline-block;
+		//line-height: 1;
+
+	}
+	&__link {
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		&:hover,
+		&:focus,
+		&.active {
+			transform: scale(1.1);
+		}
+	}
+	&__img {
+			display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-image: url("../img/social-sprite.png");
+		background-repeat: no-repeat;
+
+		&--1 {background-position: 0px 0px}
+		&--2 {background-position: 0px -26px}
+		&--3 {background-position: 0px -52px}
+		&--4 {background-position: 0px -78px}
+		&--5 {background-position: 0px -104px}
+	}
+}
+//блок с социальными сетями end
+
+.grid {
+	
+	width: 111rem;
+	height: 100%;
+	margin: 6rem auto ;
+	font-size: 0;
+
+
+	
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	
+	&__item {
+		width: 24%;
+		float: left;
+		border: none;
+		outline: none;
+		overflow: hidden;
+		position: relative;
+		margin-right: 1%;
+		margin-bottom: 1rem;
+		& img {
+			min-width: 100%;
+			min-height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__overlay {
+		position: absolute;
+		z-index: 100;
+		font-size: 5rem;
+		color:rgba(255,255,255, 0.3);
+		top:0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0,0,0, 0.6);
+		opacity: 0;
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+}
+.grid-sizer {
+	width: 270px;
+}
+.gutter-sizer {
+	width:1rem
+}
+.height {
+	&-210{
+		height: 21rem;
+	}
+	&-230{
+		height: 23rem;
+	}
+	&-255{
+		height: 25.5rem;
+	}
+	&-270{
+		height: 27rem;
+	}
+	&-300{
+		height: 30rem;
+	}
+	&-340{
+		height: 34rem;
+	}
+	&-360{
+		height: 36rem;
+	}
+	
+
+	&-375{
+		height: 37.5rem;
+	}
+	
+}
+.slider {
+	margin: 6rem 7rem 9rem;
+	position: relative;
+	&--test {
+		background-color: #fff;
+		padding: 5rem 3rem 12rem;
+
+	}
+}
+.slide {
+	padding-right:1px ;
+	&--test {
+		padding: 5rem 3rem 12rem;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		&--test {
+			align-items:center;
+		}
+	}
+	&__img {
+		background-color: #a9a9a9;
+			&--circle {
+				border-radius: 50%;
+				width: 13rem;
+				height: 13rem;
+				position: relative;
+				overflow: hidden;
+				& img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+	}
+	&__resume {
+			width: 430px;
+			text-align: right;
+			&--test {
+			width: 750px;
+			text-align: left;
+		}
+	}
+	&__title-box {
+		border-right: 4px solid #19bd9a;
+		padding-right:4.3rem ;
+	}
+
+	&__title {
+		color: #464646;
+		font: 400 2rem/1 $text-font;
+		&--test {
+		color:$theme-color;
+		font: 700 1.4rem/1.78 $text-font;	
+		}
+	}
+	&__subtitle {
+			color: $text-color;
+			font: 300i 1.4rem/1.5 $title-font;
+			text-transform: uppercase;
+			&--test {
+		//color:$theme-color;
+		font: 400 1.4rem/1.5 $text-font;	
+		}
+
+	}
+	&__description {
+		display: inline-block;
+		font: 400 1.6rem/1.25 $text-font;
+		border-right: 4px solid transparent;
+		padding-right: 4.3rem ;
+		&--test {
+
+		}
+	}
+	
+}
+.slick-arrow {
+	display: none;
+}
+.slick-dots {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	//margin-bottom: 5rem;
+	li {
+		display: inline-block;
+		margin: 5px;
+		button{
+			font-size: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		border: 1px solid $theme-color ;
+		outline: none;
+		line-height: 10px;
+		background:#fff;
+		padding: 0;
+		
+		
+		&:hover,
+ 		&:focus{
+		background:$theme-color;
+		}
+		 }
+		 &.slick-active{
+		 	button{
+		background:$theme-color;
+		}
+		
+	}
+		
+		
+	}
+}
